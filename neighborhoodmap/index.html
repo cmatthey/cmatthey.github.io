@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My neighorhood</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <!-- <div class="container"> -->
+    <!-- <div class="row">
+      <div class=".col-md-3"> -->
+        <select data-bind="options: categories, optionsText: 'category', value: selectedCategory, event: {change: showMarkers}" id="category"></select>
+        <div data-bind="with: selectedCategory">
+          <div data-bind="text: 'category'"></div>
+          <ul data-bind="foreach: POIs">
+            <li>
+              <button>
+                <span data-bind="text: title, click: show"></span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      <!-- </div> -->
+      <div id="map"></div>
+    <!-- </div> -->
+  <!-- </div> -->
+
+  <!-- https://stackoverflow.com/questions/28274940/using-a-external-js-file-with-knockout-not-applying-bindings -->
+  <script
+          src="https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=AIzaSyBpgEZ4iexILdostcaViVlyZg8ebFc0ra8&v=3">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  			  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script type='text/javascript' src='js/knockout.js'></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
